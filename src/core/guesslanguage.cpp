@@ -488,19 +488,39 @@ GuessLanguagePrivate::GuessLanguagePrivate()
             names = getNames(QLocale::VarangKshitiScript);
             break;
         case QChar::Script_Ahom:
+#if QT_VERSION >= 0x050700
             names = getNames(QLocale::AhomScript);
+#else
+            names = getNames((QLocale::Script)128);
+#endif
             break;
         case QChar::Script_AnatolianHieroglyphs:
+#if QT_VERSION >= 0x050700
             names = getNames(QLocale::AnatolianHieroglyphsScript);
+#else
+            names = getNames((QLocale::Script)129);
+#endif
             break;
         case QChar::Script_Hatran:
+#if QT_VERSION >= 0x050700
             names = getNames(QLocale::HatranScript);
+#else
+            names = getNames((QLocale::Script)130);
+#endif
             break;
         case QChar::Script_Multani:
+#if QT_VERSION >= 0x050700
             names = getNames(QLocale::MultaniScript);
+#else
+            names = getNames((QLocale::Script)131);
+#endif
             break;
         case QChar::Script_OldHungarian:
+#if QT_VERSION >= 0x050700
             names = getNames(QLocale::OldHungarianScript);
+#else
+            names = getNames((QLocale::Script)132);
+#endif
             break;
         case QChar::Script_Unknown:
         case QChar::Script_Inherited:
